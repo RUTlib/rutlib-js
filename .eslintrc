@@ -1,0 +1,10 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      "semi": [2, "always"],      
+      "quotes": [2, "single"],
+      "indent": ["error", 2]
+    },
+    "extends": "eslint:recommended"
+  }
