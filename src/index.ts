@@ -81,7 +81,11 @@ function generateRut (length:number = 8, formated:boolean=true): string  {
   if (length === 0) {
     return '';
   }
-  const rutNumbers = Math.floor(Math.random() * Math.pow(10, length));
+  let rutNumbers = Math.floor(Math.random() * Math.pow(10, length));
+  const lengthRutNumbers = rutNumbers.toString().length;
+  while (lengthRutNumbers < length) {
+    rutNumbers = Math.floor(Math.random() * Math.pow(10, length));
+  }
   const rutLastDigit = getLastDigitOfRut(rutNumbers);
   const rutGenerated = formatRut(rutNumbers.toString() + rutLastDigit, formated);
   return rutGenerated;

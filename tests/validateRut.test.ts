@@ -2,7 +2,7 @@
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
 
-import { cleanRut, validateRut, getLastDigitOfRut, formatRut, generateRut } from '../lib';
+import { cleanRut, validateRut, getLastDigitOfRut, formatRut, generateRut } from '../src';
 
 
 describe('Clean rut function', () => { 
