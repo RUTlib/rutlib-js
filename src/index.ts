@@ -37,9 +37,9 @@ function validateRut(rut: string): boolean {
 
 function getLastDigitOfRut(rutNumbers:number): string {
   /**
-   * Get de verificator digit from a number .
+   * Get de verificator digit of a RUT.
    * @param rutNumbers  RUT numbers
-   * @return {string} as verificator digit.
+   * @return {string} RUT last digit.
    */
 
   let M = 0,

@@ -1,6 +1,6 @@
 {
   "name": "rutlib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a fast and robust RUT validator/generator",
   "main": "lib/index.js",
   "types": "lib",
@@ -22,7 +22,7 @@
     "url": "https://github.com/RUTlib/rutlib-js"
   },
   "author": "Felipe Vergara <fvergaracl@gmail.com>",
-  "license": "ISC",
+  "license": "Apache-2.0",  
   "devDependencies": {
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",
