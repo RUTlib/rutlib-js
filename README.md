@@ -11,7 +11,7 @@ A JavaScript date library for parsing, validating, manipulating, generating and 
 ## Quick Installation
 
 ```bash
-npm i validate-response
+npm i rutlib
 ```
 
 ## Usage
