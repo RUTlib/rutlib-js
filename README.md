@@ -1,5 +1,7 @@
 # [RUTlib](http://rutlib.cl)
 
+[![NPM](https://nodei.co/npm/rutlib.png)](https://npmjs.org/package/rutlib)
+
 [![GitHub license](https://img.shields.io/github/license/RUTlib/rutlib-js?logo=javascript&style=for-the-badge)](https://github.com/RUTlib/rutlib-js/blob/main/LICENSE.md)
 
 <!--
