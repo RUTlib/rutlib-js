@@ -1,6 +1,6 @@
 {
   "name": "rutlib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provides a fast and robust RUT validator/generator",
   "main": "lib/index.js",
   "types": "lib",
@@ -22,7 +22,7 @@
     "url": "https://github.com/RUTlib/rutlib-js"
   },
   "author": "Felipe Vergara <fvergaracl@gmail.com>",
-  "license": "Apache-2.0",  
+  "license": "Apache-2.0",
   "devDependencies": {
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",
@@ -30,7 +30,7 @@
     "@typescript-eslint/parser": "^5.3.1",
     "chai": "^4.3.4",
     "eslint": "^8.2.0",
-    "mocha": "^9.1.3",
+    "mocha": "^9.2.1",
     "prettier": "^2.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
