@@ -111,6 +111,16 @@ generateRut(9, false); // 123456789-2 (random)
 generateRut(9, false); // 987654321-1 (random)
 ```
 
+
+## Support the Project
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/fvergaracl)
+
+## If you'd like to contribute
+
+Send me an email to rutlibteam@gmail.com o send me a DM
+
 ---
 
-Version 1.0.1
+Version 1.0.2
+
