@@ -15,12 +15,19 @@ A JavaScript date library for parsing, validating, manipulating, generating and 
 ```bash
 npm i rutlib
 ```
+The module exports the following functions:
+
+- **cleanRut(rut: string): string**
+- **validateRut(rut: string): boolean**
+- **getLastDigitOfRut(rutNumbers: number): string**
+- **formatRut(rut: string, withDots: boolean = true): string**
+- **generateRut(length: number = 8, formatted: boolean = true): string**
 
 ## Usage
 
 #### Clean a RUT
 
-Delete all non-numeric characters from a RUT.
+This function takes a RUT as a string and removes all non-numeric characters, and transforms the input to uppercase.
 
 | Function | Params       | Return | Description                        |
 | -------- | ------------ | ------ | ---------------------------------- |
@@ -36,7 +43,7 @@ cleanRut('12343'); // 12343
 
 #### Validate a RUT
 
-Verify if a RUT is valid.
+This function checks whether a RUT is valid according to the RUT verification rules. Returns true if the RUT is valid and false otherwise.
 
 | Function    | Params       | Return  | Description                                            |
 | ----------- | ------------ | ------- | ------------------------------------------------------ |
@@ -56,7 +63,7 @@ validateRut('12340'); // false
 
 #### Get Verificator Digit of a number
 
-Get de verificator digit(VD) of a number.
+This function receives the numeric part of the RUT and calculates the corresponding verification digit.
 
 | Function          | Params                  | Return | Description                       |
 | ----------------- | ----------------------- | ------ | --------------------------------- |
@@ -72,7 +79,7 @@ getLastDigitOfRut(1236); // K
 
 #### Format RUT
 
-Format a RUT to a valid format.
+This function takes a RUT and formats it according to the RUT format conventions, with the option to add or not separation points every three digits.
 
 | Function  | Params                                               | Return | Description          |
 | --------- | ---------------------------------------------------- | ------ | -------------------- |
@@ -92,7 +99,7 @@ formatRut('12343', false); //  1234-3
 
 #### Get random RUT
 
-Generate a RUT with a random number.
+This function generates a valid RUT randomly. You can specify the length of the RUT number and whether the generated RUT should be formatted or not.
 
 | Function    | Params                                                             | Return | Description          |
 | ----------- | ------------------------------------------------------------------ | ------ | -------------------- |
@@ -118,9 +125,15 @@ generateRut(9, false); // 987654321-1 (random)
 
 ## If you'd like to contribute
 
-Send me an email to rutlibteam@gmail.com o send me a DM
+If you want to contribute to this module, you can do so by creating Issues in the repository or through Pull Requests. Remember to follow the code of conduct and best practices for clean code.
+
+It is important to mention that any change in the logic of the module's functions should be properly tested and documented.
+
+
+## More information
+
+For more information about the RUT, you can consult the following link: RUT (Chile)
 
 ---
 
-Version 1.0.2
-
+Version 1.0.3
