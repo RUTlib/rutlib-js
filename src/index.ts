@@ -91,10 +91,35 @@ function generateRut (length:number = 8, formated:boolean=true): string  {
   return rutGenerated;
 }
 
+
+function compareRuts(rut1: string, rut2: string): boolean {
+  /**
+   * Compare two RUTs.
+   * This function takes two RUTs as strings, cleans them, validates them, and then compares them.
+   * If both RUTs are valid and are the same, it returns true; otherwise, it returns false.
+   * @param rut1 - The first RUT to compare.
+   * @param rut2 - The second RUT to compare.
+   * @return {boolean} - Return true if both RUTs are valid and are the same, false otherwise.
+   * @throws {Error} - Throws an error if any of the RUTs is invalid.
+   */
+  // Clean the RUTs
+  const cleanedRut1 = cleanRut(rut1);
+  const cleanedRut2 = cleanRut(rut2);
+  
+  // Validate the RUTs
+  if (!validateRut(cleanedRut1) || !validateRut(cleanedRut2)) {
+    throw new Error('One or both RUTs are invalid');
+  }
+  
+  // Compare the cleaned RUTs
+  return cleanedRut1 === cleanedRut2;
+}
+
 export { 
   cleanRut, 
   validateRut, 
   getLastDigitOfRut, 
   formatRut,
-  generateRut 
+  generateRut,
+  compareRuts
 };         

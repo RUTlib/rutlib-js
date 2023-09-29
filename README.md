@@ -1,4 +1,7 @@
 # [RUTlib](http://rutlib.cl)
+<p align="center">
+  <img src="https://github.com/RUTlib/RUTlib-vscode/blob/main/images/rutlibJS_logo.png?raw=tru" alt="RUTlib's javascipt library logo"/>
+</p>
 
 [![NPM](https://nodei.co/npm/rutlib.png)](https://npmjs.org/package/rutlib)
 
@@ -118,6 +121,25 @@ generateRut(9, false); // 123456789-2 (random)
 generateRut(9, false); // 987654321-1 (random)
 ```
 
+
+#### Compare two RUTs
+
+This function compares two RUTs. It takes two RUTs as strings, cleans them using the `cleanRut` function, validates them using the `validateRut` function, and then compares them. If both RUTs are valid and are the same, it returns true; otherwise, it returns false. If any of the RUTs is invalid, it will throw an error.
+
+| Function    | Params                | Return  | Description                                                 |
+| ----------- | --------------------- | ------- | ----------------------------------------------------------- |
+| compareRuts | rut1 (String), rut2 (String) | Boolean | Return true if both RUTs are valid and are the same, false otherwise. Throws an error if any of the RUTs is invalid. |
+
+```javascript
+import { compareRuts } from 'rutlib';
+
+try {
+  const result = compareRuts('12.345.678-5', '12345678-5');
+  console.log(result); // Will print true if the RUTs are the same and valid
+} catch (error) {
+  console.error(error.message); // Will print the error message if any of the RUTs is invalid
+}
+```
 
 ## Support the Project
 
