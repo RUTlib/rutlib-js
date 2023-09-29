@@ -27,6 +27,7 @@ The module exports the following functions:
 - **getLastDigitOfRut(rutNumbers: number): string**
 - **formatRut(rut: string, withDots: boolean = true): string**
 - **generateRut(length: number = 8, formatted: boolean = true): string**
+- **compareRuts(rut1: string, rut2 : string )): boolean**
 
 ## Usage
 
