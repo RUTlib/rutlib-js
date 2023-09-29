@@ -29,13 +29,11 @@ function validateRut(rut: string): boolean {
     S = 1;
   for (; rutNumbers; rutNumbers = Math.floor(rutNumbers / 10))
     S = (S + (rutNumbers % 10) * (9 - (M++ % 6))) % 11;
-  const lastDigitValid =  (S ? S - 1 : 'K').toString();
+  const lastDigitValid = (S ? S - 1 : 'K').toString();
   return lastDigitValid === rutLastDigit;
 }
 
-
-
-function getLastDigitOfRut(rutNumbers:number): string {
+function getLastDigitOfRut(rutNumbers: number): string {
   /**
    * Get de verificator digit of a RUT.
    * @param rutNumbers  RUT numbers
@@ -46,11 +44,11 @@ function getLastDigitOfRut(rutNumbers:number): string {
     S = 1;
   for (; rutNumbers; rutNumbers = Math.floor(rutNumbers / 10))
     S = (S + (rutNumbers % 10) * (9 - (M++ % 6))) % 11;
-  const lastDigitValid =  (S ? S - 1 : 'K').toString();
+  const lastDigitValid = (S ? S - 1 : 'K').toString();
   return lastDigitValid;
 }
 
-function formatRut (rut:string, withDots:boolean = true): string  {
+function formatRut(rut: string, withDots: boolean = true): string {
   /**
    * Format a RUT to a valid format.
    * @param rut  RUT string
@@ -58,7 +56,7 @@ function formatRut (rut:string, withDots:boolean = true): string  {
    * @return {string} RUT formatted.
    */
   rut = cleanRut(rut);
-  let rutFormatted; 
+  let rutFormatted;
   if (withDots) {
     rutFormatted = rut.slice(-4, -1) + '-' + rut.substr(rut.length - 1);
     for (let i = 4; i < rut.length; i += 3) {
@@ -71,7 +69,7 @@ function formatRut (rut:string, withDots:boolean = true): string  {
   return rutFormatted;
 }
 
-function generateRut (length:number = 8, formated:boolean=true): string  {
+function generateRut(length: number = 8, formated: boolean = true): string {
   /**
    * Generate a RUT with a random number.
    * @param length  RUT length
@@ -87,10 +85,12 @@ function generateRut (length:number = 8, formated:boolean=true): string  {
     rutNumbers = Math.floor(Math.random() * Math.pow(10, length));
   }
   const rutLastDigit = getLastDigitOfRut(rutNumbers);
-  const rutGenerated = formatRut(rutNumbers.toString() + rutLastDigit, formated);
+  const rutGenerated = formatRut(
+    rutNumbers.toString() + rutLastDigit,
+    formated
+  );
   return rutGenerated;
 }
-
 
 function compareRuts(rut1: string, rut2: string): boolean {
   /**
@@ -105,21 +105,21 @@ function compareRuts(rut1: string, rut2: string): boolean {
   // Clean the RUTs
   const cleanedRut1 = cleanRut(rut1);
   const cleanedRut2 = cleanRut(rut2);
-  
+
   // Validate the RUTs
   if (!validateRut(cleanedRut1) || !validateRut(cleanedRut2)) {
     throw new Error('One or both RUTs are invalid');
   }
-  
+
   // Compare the cleaned RUTs
   return cleanedRut1 === cleanedRut2;
 }
 
-export { 
-  cleanRut, 
-  validateRut, 
-  getLastDigitOfRut, 
+export {
+  cleanRut,
+  validateRut,
+  getLastDigitOfRut,
   formatRut,
   generateRut,
   compareRuts
-};         
+};

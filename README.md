@@ -1,4 +1,5 @@
 # [RUTlib](http://rutlib.cl)
+
 <p align="center">
   <img src="https://github.com/RUTlib/RUTlib-vscode/blob/main/images/rutlibJS_logo.png?raw=tru" alt="RUTlib's javascipt library logo"/>
 </p>
@@ -18,6 +19,7 @@ A JavaScript date library for parsing, validating, manipulating, generating and 
 ```bash
 npm i rutlib
 ```
+
 The module exports the following functions:
 
 - **cleanRut(rut: string): string**
@@ -121,13 +123,12 @@ generateRut(9, false); // 123456789-2 (random)
 generateRut(9, false); // 987654321-1 (random)
 ```
 
-
 #### Compare two RUTs
 
 This function compares two RUTs. It takes two RUTs as strings, cleans them using the `cleanRut` function, validates them using the `validateRut` function, and then compares them. If both RUTs are valid and are the same, it returns true; otherwise, it returns false. If any of the RUTs is invalid, it will throw an error.
 
-| Function    | Params                | Return  | Description                                                 |
-| ----------- | --------------------- | ------- | ----------------------------------------------------------- |
+| Function    | Params                       | Return  | Description                                                                                                          |
+| ----------- | ---------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
 | compareRuts | rut1 (String), rut2 (String) | Boolean | Return true if both RUTs are valid and are the same, false otherwise. Throws an error if any of the RUTs is invalid. |
 
 ```javascript
@@ -151,11 +152,10 @@ If you want to contribute to this module, you can do so by creating Issues in th
 
 It is important to mention that any change in the logic of the module's functions should be properly tested and documented.
 
-
 ## More information
 
 For more information about the RUT, you can consult the following link: RUT (Chile)
 
 ---
 
-Version 1.0.3
+Version 1.0.4
