@@ -1,7 +1,7 @@
 # [RUTlib](http://rutlib.cl)
 
 <p align="center">
-  <img src="https://github.com/RUTlib/RUTlib-vscode/blob/main/images/rutlibJS_logo.png?raw=tru" alt="RUTlib's javascipt library logo"/>
+  <img src="https://github.com/RUTlib/rutlib-js/blob/main/images/rutlibJS_logo.png?raw=tru" alt="RUTlib's javascipt library logo"/>
 </p>
 
 [![NPM](https://nodei.co/npm/rutlib.png)](https://npmjs.org/package/rutlib)
